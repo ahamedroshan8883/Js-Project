@@ -9,29 +9,12 @@ const form = document.querySelector('form')
         Validateform()
                 });
 
-const Validateform = ()=>{
-    const fnameval = fstname.value.trim();
-    const lnameval = lstname.value.trim();
+const emailvalidate =()=>{
     const gmailval = gmail.value.trim();
-    const passwdval = passwd.value.trim();
-    const conpasswdval = conpasswd.value.trim();
-
     function isEmail(){
         const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
             return reg.test(gmailval)
     }
-    if(fnameval==""){
-        setError(fstname,"First name is required")
-    }else{
-        setDefault(fstname)
-    }
-
-    if(lnameval==""){
-        setError(lstname,"Last name is required")
-    }else{
-        setDefault(lstname)
-    }
-
     if(gmailval==""){
         setError(gmail,"Email ID required")
     }else if(!isEmail()){
@@ -40,7 +23,28 @@ const Validateform = ()=>{
     else{
         setDefault(gmail)
     }
+}
 
+const fstnamevalidate = ()=>{
+    const fnameval = fstname.value.trim();
+    if(fnameval==""){
+        setError(fstname,"First name is required")
+    }else{
+        setDefault(fstname)
+    }
+}
+
+const lstnamevalidate =()=>{
+    const lnameval = lstname.value.trim();
+    if(lnameval==""){
+        setError(lstname,"Last name is required")
+    }else{
+        setDefault(lstname)
+    }
+}
+
+const passwdvalidate = ()=>{
+    const passwdval = passwd.value.trim();
     if(passwdval==""){
         setError(passwd,"Password required")
     }
@@ -53,7 +57,10 @@ const Validateform = ()=>{
     else{
         setDefault(passwd)
     }
+}
 
+const conpasswdvalidate = ()=>{
+    const conpasswdval = conpasswd.value.trim();
     if(conpasswdval==""){
         setError(conpasswd,"Confirm password is required")
     }
@@ -65,6 +72,14 @@ const Validateform = ()=>{
     else{
         setDefault(conpasswd)
     }
+}
+const Validateform = ()=>{
+    fstnamevalidate();
+    lstnamevalidate();
+    emailvalidate();
+    passwdvalidate();
+
+    
 }
     function setError(input,message){
         const formControl = input.parentElement;

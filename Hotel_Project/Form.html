@@ -71,13 +71,13 @@
                 
             <div class="form_container-name">
                 <div class="form_container-input">
-                    <input type="text" placeholder="First Name" id="firstname">
+                    <input type="text" placeholder="First Name" id="firstname" onblur="fstnamevalidate()">
                     <i class="fa-solid fa-user"></i>
                     <i class="fa-solid fa-circle-exclamation"></i>
                     <small>error</small>
                 </div>
                 <div class="form_container-input">
-                    <input type="text" placeholder="Last Name" id="lastname">
+                    <input type="text" placeholder="Last Name" id="lastname" onblur="lstnamevalidate()" onfocus="fstnamevalidate()">
                     <i class="fa-solid fa-user"></i>
                     <i class="fa-solid fa-circle-exclamation"></i>
                     <small>error</small>
@@ -85,21 +85,21 @@
             </div>
             <div class="form_container-input">
                 <label for="Name">Gmail Id</label><br>
-                <input type="text" placeholder="Enter your Gmail Id" id="gmail">
+                <input type="text" placeholder="Enter your Gmail Id" id="gmail" onblur="emailvalidate()" onfocus="fstnamevalidate();lstnamevalidate()">
                 <i class="fa-solid fa-circle-exclamation"></i>
                 <i class="fa-regular fa-envelope"></i><br>
                 <small>error</small>
             </div>
             <div class="form_container-input">
                 <label for="Name">Password</label><br>
-                <input type="password" placeholder="Password" id="password">
+                <input type="password" placeholder="Password" id="password" onblur="passwdvalidate()" onfocus="fstnamevalidate();lstnamevalidate();emailvalidate()">
                 <i class="fa-solid fa-circle-exclamation"></i>
                 <i class="fa-regular fa-keyboard"></i><br>
                 <small>error</small>
             </div>
             <div class="form_container-input">
                 <label for="Name">Confirm Password</label><br>
-                <input type="password" placeholder="Confirm Password" id="confirmpassword">
+                <input type="password" placeholder="Confirm Password" id="confirmpassword" onblur="conpasswdvalidate()" onfocus="fstnamevalidate();lstnamevalidate();emailvalidate();passwdvalidate()">
                 <i class="fa-solid fa-circle-exclamation"></i>
                 <i class="fa-regular fa-keyboard"></i>
                 <br>
