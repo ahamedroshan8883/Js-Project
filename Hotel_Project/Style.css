@@ -9,8 +9,45 @@
     width: 53%;
     height: 100%;
 }
-.form_container input[type=text], textarea[type="text"]{
-   padding-left: 5px;
+.form_container-name{
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 650px;
+}
+.form_container-name .form_container-input{
+   height: 50px;
+   width: 300px;
+   overflow-x: hidden;
+   overflow-y: hidden;
+}
+.form_container-name .form_container-input.error i.fa-circle-exclamation{
+    color: #ff0000;
+    visibility: visible;
+    position: relative;
+    bottom: 35px;
+    left: 250px;
+}
+.form_container-name .form_container-input i.fa-user{
+    color:#c6c6c9;
+    position: relative;
+    bottom: 35px;
+    left: 10px;
+}
+.form_container-name .form_container-input input[type="text"]{
+    width: 300px;
+}
+.form_container-name .form_container-input.error input[type="text"]{
+    width: 300px;
+    border: 3px solid #ff0000;
+ }
+ .form_container-name .form_container-input.error small{
+    color: #ff0000;
+    visibility: visible;
+    position: absolute;
+ }
+.form_container-input input[type=text], input[type=password]{
+   padding-left: 30px;
    font-size: medium;
    color: #707071;
    width: 550px;
@@ -22,20 +59,27 @@
    border-radius: 5px;
    background: none;
 }
-.form_container-input input:focus,textarea:focus{
+.form_container-input.error input[type=text],.form_container-input.error input[type=password]{
+   border: 3px solid #ff0000;
+}
+.form_container-input.error i.fa-circle-exclamation{
+    color: #ff0000;
+}
+.form_container-input input:focus,.form_container-input_name input:focus{
     border: 3px solid #bc9b6a;
 }
-.form_container-input textarea[type="text"]{
-    overflow: hidden;
-    height: 150px;
-}
-.form_container-input input::placeholder,textarea::placeholder{
+.form_container-input input::placeholder,.form_container-input_name input::placeholder{
     color:  #c6c6c9;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;  
 }
 .form_container-input{
-    padding: 20px 10px 10px 40px;
+    padding: 10px 10px 10px 20px;
+}
+.form_container-input i.fa-envelope,i.fa-keyboard{
+    color:#c6c6c9;
+    position: relative;
+    right: 565px;
 }
 .form_container label{
     color:#bc9b6a;
@@ -48,10 +92,19 @@
     background-color: #FAF7FF;
     width: 47%;
 }
+.form_container-input small{
+    color: #ff0000;
+    padding-left: 20px;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    visibility: hidden;
+}
+.form_container-input.error small{
+    visibility: visible;
+}
 .form-btn button{
     font-family: 'Lobster', sans-serif;  
     display: inline-block;
-    margin-top: 30px;
     padding: 15px;
     width: 100px;
     background: none;
@@ -82,13 +135,13 @@ ul{
     display: flex;
     flex-direction: row;
 }
-i{
+.social_con i{
     cursor: pointer;
     color: #FAF7FF;
     margin: 10px;
     font-size: x-large;
 }
-i:hover{
+.social_con i:hover{
     color: #000000;
 }
 .describe_container hr{
@@ -127,8 +180,17 @@ i:hover{
     margin-top: 30px;
     color: #FAF7FF;
     font-family: 'Lobster', sans-serif;
-    font-size: x-large;
+    font-size: large;
     font-weight: 100; 
+}
+.title_form-container{
+    cursor: pointer;
+    text-align: center;
+    margin-top: 30px;
+    color: #bc9b6a;
+    font-family: 'Lobster', sans-serif;
+    font-size: larger;
+    font-weight: 100;
 }
 .dscrb_content-title h2{
     text-align: center;
@@ -150,10 +212,10 @@ i:hover{
     border: none;
     outline: none;
 }
-.dscrb_content button:hover,i:hover{
+.dscrb_content button:hover,.dscrb_content i:hover{
     background-color: #bc9b6a;
     outline: none;
     border: none;
     border-radius: 20px;
-    color: #FAF7FF !important;
+    color: #FAF7FF ;
 }

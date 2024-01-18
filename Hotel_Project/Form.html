@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Form Page</title>
+        <title> Luxury 5 Star Hotel Dubai | PALAZZO VERSACE DUBAI</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -10,16 +10,25 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <div class="container">
+    <div class="container">
         <div class="describe_container">
-            <div class="title"><h1>Roshan Resort</h1></div>
-           <div class="dscrb_content" id="imgcon">
-            <div class="dscrb_content-title"><h2  id="title"><!--Great Hospitality--></h2></div>
-            <button class="icon" onclick="slideprev()"><i onclick="slideprev()" class="fa-solid fa-chevron-left"></i></button>
-            <button class="icon"onclick="slidenext()"style="position: relative;left: 685px;"><i onclick="slidenext()" class="fa-solid fa-chevron-right" ></i></button>
-            <br><br><br><p id="dcsrbcon"><!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Vel, mollitia inventore nostrum architecto labore ipsa nulla ducimus reiciendis id repellendus tempora earum numquam, 
-                fugiat saepe modi dolorem optio? Et, ipsam? --></p>
+            <div class="title">
+                <h1>PALAZZO VERSACE DUBAI</h1>
+            </div>
+            <div class="dscrb_content" id="imgcon">
+                <div class="dscrb_content-title">
+                    <h2  id="title"><!--Great Hospitality--></h2>
+                </div>
+                    <button class="icon" onclick="slideprev()">
+                    <i onclick="slideprev()" class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="icon"onclick="slidenext()"style="position: relative;left: 685px;">
+                    <i onclick="slidenext()" class="fa-solid fa-chevron-right" ></i>
+                    </button>
+                    <br><br><br>
+                    <p id="dcsrbcon"><!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Vel, mollitia inventore nostrum architecto labore ipsa nulla ducimus reiciendis id repellendus tempora earum numquam, 
+                    fugiat saepe modi dolorem optio? Et, ipsam? --></p>
            </div>
                 <hr>
                 <div class="social_con">
@@ -44,35 +53,65 @@
                  <div class="footer">
                     <p>Jaddaf Waterfront - Al Jaddaf - Jaddaf Waterfront - Dubai - United Arab Emirates</p>
                     <a href="">T: +971 4 556 8888</a>&nbsp;&nbsp;&nbsp;&nbsp; 
-                   <a href="">E: info@palazzoversace.ae</a> </div>
-                   <div class="footer2">
+                    <a href="">E: info@palazzoversace.ae</a> 
+                </div>
+                <div class="footer2">
                     <hr>
                     <p>© 2024 PALAZZO VERSACE DUBAI</p>
                 </div>
         </div>
         
         <div class="form_container">
+            <div class="title_form-container">
+                <h2>Sign up</h2>
+            </div>
+           <form method="get" id="form" action="">
+            <label for="Name" style="padding-left: 20px;">Full Name</label><br>
+                
+                
+            <div class="form_container-name">
+                <div class="form_container-input">
+                    <input type="text" placeholder="First Name" id="firstname">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>error</small>
+                </div>
+                <div class="form_container-input">
+                    <input type="text" placeholder="Last Name" id="lastname">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>error</small>
+                </div>
+            </div>
             <div class="form_container-input">
-            <label for="Name">Full Name</label><br>
-            <input type="text" placeholder="Enter your name">
-            <br></div>
+                <label for="Name">Gmail Id</label><br>
+                <input type="text" placeholder="Enter your Gmail Id" id="gmail">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-regular fa-envelope"></i><br>
+                <small>error</small>
+            </div>
             <div class="form_container-input">
-            <label for="Name">Gmail Id</label><br>
-            <input type="text" placeholder="Enter your Gmail Id">
-            <br></div>
+                <label for="Name">Password</label><br>
+                <input type="password" placeholder="Password" id="password">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-regular fa-keyboard"></i><br>
+                <small>error</small>
+            </div>
             <div class="form_container-input">
-            <label for="Name">Phone No</label><br>
-            <input type="text" placeholder="Enter your phone number">
-            <br></div>
-            <div class="form_container-input">
-            <label for="Name">Feedback</label><br>
-            <textarea type="text" placeholder="Please give your Feedback"></textarea>
+                <label for="Name">Confirm Password</label><br>
+                <input type="password" placeholder="Confirm Password" id="confirmpassword">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-regular fa-keyboard"></i>
+                <br>
+                <small>error</small>
             </div>
             <div class="form-btn">
                 <button type="submit">Submit</button>
                 <button>Cancel</button>
             </div>
+           </form>
         </div>
     </div>
+    <script src="formvalidation.js" defer></script>
     </body>
 </html>
