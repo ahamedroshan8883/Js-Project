@@ -49,3 +49,27 @@ document.getElementById("imgcon").style.backgroundImage = "url("+dscrbdetaills[0
 document.getElementById("dcsrbcon").textContent = dscrbdetaills[0].describe
 slidenextpertime()
 })
+
+
+    const eye = document.getElementById("fa-eye")
+
+    eye.onclick = ()=>{
+        if(passwd.type=="password"){
+            passwd.type="text";
+            eye.className =  "fa-solid fa-eye-slash"
+        }else{
+            passwd.type="password";
+            eye.className =  "fa-solid fa-eye"
+        }
+    }
+    const eye1= document.getElementById("fa-eye1")
+
+    eye1.onclick = ()=>{
+        if(conpasswd.type=="password"){
+            conpasswd.type="text";
+            eye1.className =  "fa-solid fa-eye-slash"
+        }else{
+            conpasswd.type="password";
+            eye1.className =  "fa-solid fa-eye"
+        }
+    }

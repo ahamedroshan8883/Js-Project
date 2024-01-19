@@ -7,7 +7,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:wght@100&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/6b0c8e229f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="Style.css">
-        <script src="script.js"></script>
     </head>
     <body>
     <div class="container">
@@ -94,7 +93,8 @@
                 <label for="Name">Password</label><br>
                 <input type="password" placeholder="Password" id="password" onblur="passwdvalidate()" onfocus="fstnamevalidate();lstnamevalidate();emailvalidate()">
                 <i class="fa-solid fa-circle-exclamation"></i>
-                <i class="fa-regular fa-keyboard"></i><br>
+                <i class="fa-regular fa-keyboard"></i>
+                <i class="fa-solid fa-eye" id="fa-eye"></i>
                 <small>error</small>
             </div>
             <div class="form_container-input">
@@ -102,6 +102,7 @@
                 <input type="password" placeholder="Confirm Password" id="confirmpassword" onblur="conpasswdvalidate()" onfocus="fstnamevalidate();lstnamevalidate();emailvalidate();passwdvalidate()">
                 <i class="fa-solid fa-circle-exclamation"></i>
                 <i class="fa-regular fa-keyboard"></i>
+                <i class="fa-solid fa-eye" id="fa-eye1"></i>
                 <br>
                 <small>error</small>
             </div>
@@ -113,5 +114,6 @@
         </div>
     </div>
     <script src="formvalidation.js" defer></script>
+    <script src="script.js"></script>
     </body>
 </html>

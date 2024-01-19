@@ -219,3 +219,15 @@ ul{
     border-radius: 20px;
     color: #FAF7FF ;
 }
+.fa-solid.fa-eye{
+    position: relative;
+    right: 80px;
+    color: #c6c6c9;
+    cursor: pointer;
+}
+.fa-solid.fa-eye-slash{
+    position: relative;
+    right: 80px;
+    color: #c6c6c9;
+    cursor: pointer;
+}
