@@ -1,106 +1,118 @@
-.container{
+body,html{
+    height: 100%;
+    margin: 0;  
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+iframe{
+    background-color: #FAF7FF;
+    width: 500px;
+    height: 100%;
+}
+/* .container-fluid{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-}
+} */
 .describe_container{
     background-color:#bc9b6a;
     width: 53%;
     height: 100%;
+    padding: 10px;
 }
-.form_container-name{
+/* .form_container-name{
     padding-bottom: 30px;
     display: flex;
     flex-direction: row;
-    width: 650px;
-}
-.form_container-name .form_container-input{
-   height: 50px;
-   width: 300px;
-   overflow-x: hidden;
-   overflow-y: hidden;
-}
-.form_container-name .form_container-input.error i.fa-circle-exclamation{
-    color: #ff0000;
-    visibility: visible;
-    position: relative;
-    bottom: 35px;
-    left: 250px;
-}
-.form_container-name .form_container-input i.fa-user{
-    color:#c6c6c9;
-    position: relative;
-    bottom: 35px;
-    left: 10px;
-}
-.form_container-name .form_container-input input[type="text"]{
-    width: 300px;
-}
-.form_container-name .form_container-input.error input[type="text"]{
-    width: 300px;
-    border: 3px solid #ff0000;
- }
- .form_container-name .form_container-input.error small{
-    color: #ff0000;
-    visibility: visible;
-    position: absolute;
- }
-.form_container-input input[type=text], input[type=password]{
+    gap: 0.3rem;
+    width: 43%;
+    /* height: 40px; */
+/* } */
+/* .form_container-name .form_container-input{ */
+    /* padding-left: 50px; */
+   /* width: 300px;
+   height: 60px; */
+   /* overflow-x: hidden;
+   overflow-y: hidden; */
+/* } */
+/* #form_container-name .form_container-input label{
+   position: absolute;
+   top: 100px;
+} */
+
+#form_container-input input[type=text],#form_container-input input[type=password]{
    padding-left: 30px;
-   font-size: medium;
+   /* font-size: medium; */ 
    color: #707071;
-   width: 550px;
-   overflow-x: hidden;
-   margin-top: 10px;
+   /* width: 550px; */
+   /* overflow-x: hidden;
+   /* margin-top: 10px; */
    height: 50px;
-   outline: none;
+   /* outline: none; */
    border: 3px solid #c6c6c9;
    border-radius: 5px;
    background: none;
 }
-.form_container-input.error input[type=text],.form_container-input.error input[type=password]{
+#form_container-input-error input[type=text],#form_container-input-error input[type=password]{
+   padding-left: 40px;
    border: 3px solid #ff0000;
+   height: 50px;
+   background: none;
 }
-.form_container-input.error i.fa-circle-exclamation{
+#form_container-input-error i.fa-circle-exclamation{
     color: #ff0000;
 }
-.form_container-input input:focus,.form_container-input_name input:focus{
+#form_container-input i.fa-circle-exclamation{
+   visibility: hidden;
+}
+#form_container-input input:focus{
     border: 3px solid #bc9b6a;
 }
-.form_container-input input::placeholder,.form_container-input_name input::placeholder{
+#form_container-input input::placeholder{
     color:  #c6c6c9;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;  
 }
-.form_container-input{
-    padding: 10px 10px 10px 20px;
+#form_container-input-error input::placeholder{
+    color:  #c6c6c9;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;  
 }
-.form_container-input i.fa-envelope,i.fa-keyboard{
+i.fa-envelope,i.fa-keyboard{
     color:#c6c6c9;
-    position: relative;
-    right: 565px;
+    /* position: relative;
+    /* /* bottom: 37px; */
+    right: 565px;   
 }
-.form_container label{
+ i.fa-user{
+    color:#c6c6c9;
+}
+#form_container-input label,.title_form-container,label{
     color:#bc9b6a;
     font-size: larger;
     font-family: 'Lobster', sans-serif; 
     /* font-weight: 600; */
 }
 .form_container{
-    overflow-x: hidden;
+    /* padding-top: 0;
+    overflow-x: hidden; */
     background-color: #FAF7FF;
-    width: 47%;
+    /* width: 47%;
+    height: 100%; */
+    /* overflow-x: hidden; */
 }
-.form_container-input small{
+#form_container-input-error small{
+    padding-left: 20px   ;
     color: #ff0000;
-    padding-left: 20px;
     font-size: medium;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
-.form_container-input.error small{
-    visibility: visible;
+#form_container-input small{
+    visibility: hidden;
 }
 .form-btn button{
     font-family: 'Lobster', sans-serif;  
@@ -124,7 +136,7 @@
 }
 .describe_container p{
     text-align: justify;
-    padding: 20px;
+    /* padding: 0px; */
     color: #FAF7FF;
     font-size: large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -185,49 +197,74 @@ ul{
 }
 .title_form-container{
     cursor: pointer;
-    text-align: center;
-    margin-top: 30px;
+    /* text-align: center; */
+    /* margin-top: 30px; */
     color: #bc9b6a;
     font-family: 'Lobster', sans-serif;
     font-size: larger;
     font-weight: 100;
 }
 .dscrb_content-title h2{
+    margin: 20px  200px 0px 200px;
     text-align: center;
     color: #FAF7FF;
     font-family:'Raleway', sans-serif;
     font-weight: 1600;
 }
 .dscrb_content{
+    /* width: 700px; */
     height: 300px;
-    padding: 5px;
+    /* padding: 5px; */
+    overflow: hidden;
     /* background-image: url("img/pexels.jpg"); */
 }
-.dscrb_content i{
-    font-size: 35px;
-}
-.dscrb_content button,i{
-    background: none;
+.dscrp-btn .icon{
+    height: 50px;
+    width: 50px;
+    background-color: #111111;
+    border-radius: 30px;
+    border: 2px solid white;
     color:#FAF7FF;
-    border: none;
-    outline: none;
+    opacity: 0.2;
 }
-.dscrb_content button:hover,.dscrb_content i:hover{
-    background-color: #bc9b6a;
-    outline: none;
-    border: none;
-    border-radius: 20px;
-    color: #FAF7FF ;
+ .icon:hover{
+    opacity: 0.8;
 }
 .fa-solid.fa-eye{
     position: relative;
-    right: 80px;
+    /* bottom: 0px;
+    right: 80px; */
     color: #c6c6c9;
     cursor: pointer;
 }
 .fa-solid.fa-eye-slash{
     position: relative;
+    bottom: 0px;
     right: 80px;
     color: #c6c6c9;
     cursor: pointer;
+}
+.login_container{
+    overflow-x: hidden;
+    background-color: #FAF7FF;
+    width: 47%;
+}
+.signin_form-btn button{
+    font-family: 'Lobster', sans-serif;  
+    display: inline-block;
+    padding: 15px;
+    width: 100px;
+    background: none;
+    border: 3px solid  #bc9b6a;
+    border-radius: 5px;
+    font-size: large;
+    /* font-weight: bolder; */
+    color:  #bc9b6a;
+    cursor: pointer;
+    position: relative;
+    left: 380px;
+}
+.signin_form-btn button:hover{
+    background-color: #bc9b6a;
+    color:  #FAF7FF;
 }

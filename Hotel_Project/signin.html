@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:wght@100&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6b0c8e229f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container title_form-container text-center p-4">
+        <h2>Sign in</h2>
+    </div>
+        <form method="get" id="sign-in_form" action="">
+            <div class="ms-4 mb-3 position-relative" id="form_container-input-error">
+                <label for="Name" class="form-label">Gmail Id</label><br>
+                <input type="text" class="form-control" placeholder="Enter your Gmail Id" id="sign_in-gmail" onblur="signin_gmail_validate()">
+                <i class="fa-solid fa-envelope position-absolute top-50 start-0 ms-3"></i>
+                <i class="fa-solid fa-circle-exclamation position-absolute top-50 end-0 me-5"></i>
+                <small>error</small>
+            </div>
+            <div class= "ms-4 mb-3 position-relative" id="form_container-input-error">
+                <label for="Name" class="form-label">Password</label><br>
+                <input type="password" class="form-control" placeholder="Password" id="sign_in-password" onblur="signin_passwd_validate()" onfocus="signin_gmail_validate()">
+                <i class="fa-solid fa-keyboard position-absolute top-50 start-0 ms-3"></i>
+                <i class="fa-solid fa-eye position-absolute top-50 end-0 me-3" id="sign-in_fa-eye"></i>
+                <i class="fa-solid fa-circle-exclamation position-absolute top-50 end-0 me-5"></i>
+                <small>error</small>
+            </div>
+            <div class="signin_form-btn">
+                <button type="submit">Submit</button>
+                <button onclick="signupage()">back</button>
+            </div>
+        </form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="formvalidation.js"></script>
+<script src="script.js" defer></script>
+</html>

@@ -1,3 +1,16 @@
+const frame = window.parent.document.getElementById("myframe");
+// console.log(frame.src)
+// const sign_in_btn = document.getElementById("sign-in-btn");
+// console.log(sign_in_btn)
+// // sign_in_btn.addEventListener('click',siginipage());
+function signinpage(){
+        frame.src = "signin.html";
+    console.log(frame.src)
+    }
+function signupage(){
+// console.log(frame.src)
+    frame.src = "signup.html";
+}
 let dscrbdetaills = [
     {
         title:"Suite Rooms & Dulex Rooms",
@@ -33,25 +46,28 @@ document.getElementById("title").textContent = dscrbdetaills[currentIndex].title
 document.getElementById("imgcon").style.backgroundImage = "url("+dscrbdetaills[currentIndex].img+")"
 document.getElementById("dcsrbcon").textContent = dscrbdetaills[currentIndex].describe
 }
-const slidenextpertime = ()=>{
-currentIndex++;
-if(currentIndex>dscrbdetaills.length-1){
-console.log(currentIndex)
-currentIndex = 0}
-document.getElementById("title").textContent = dscrbdetaills[currentIndex].title
-document.getElementById("imgcon").style.backgroundImage = "url("+dscrbdetaills[currentIndex].img+")"
-document.getElementById("dcsrbcon").textContent = dscrbdetaills[currentIndex].describe
-setTimeout(slidenextpertime,10000)
-}
+// const slidenextpertime = ()=>{
+// currentIndex++;
+// if(currentIndex>dscrbdetaills.length-1){
+// console.log(currentIndex)
+// currentIndex = 0}
+// document.getElementById("title").textContent = dscrbdetaills[currentIndex].title
+// document.getElementById("imgcon").style.backgroundImage = "url("+dscrbdetaills[currentIndex].img+")"
+// document.getElementById("dcsrbcon").textContent = dscrbdetaills[currentIndex].describe
+// setTimeout(slidenextpertime,10000)
+// }
 window.addEventListener('DOMContentLoaded',function(){
-document.getElementById("title").textContent = dscrbdetaills[0].title
-document.getElementById("imgcon").style.backgroundImage = "url("+dscrbdetaills[0].img+")"
-document.getElementById("dcsrbcon").textContent = dscrbdetaills[0].describe
-slidenextpertime()
-})
-
-
-    const eye = document.getElementById("fa-eye")
+document.getElementById("title").textContent = dscrbdetaills[0].title;
+document.getElementById("imgcon").style.backgroundImage = "url("+dscrbdetaills[0].img+")";
+document.getElementById("dcsrbcon").textContent = dscrbdetaills[0].describe;
+// slidenextpertime();
+setInterval(()=>{slidenext()},10000);
+// console.log(frame.src)
+signinpage()
+});
+const signup = document.getElementById("form")
+if(signup){
+    const eye = document.getElementById("fa-eye");
 
     eye.onclick = ()=>{
         if(passwd.type=="password"){
@@ -63,13 +79,32 @@ slidenextpertime()
         }
     }
     const eye1= document.getElementById("fa-eye1")
-
     eye1.onclick = ()=>{
         if(conpasswd.type=="password"){
-            conpasswd.type="text";
-            eye1.className =  "fa-solid fa-eye-slash"
+            conpasswd.type = "text";
+            eye1.className = "fa-solid fa-eye-slash"
         }else{
-            conpasswd.type="password";
-            eye1.className =  "fa-solid fa-eye"
+            conpasswd.type = "password";
+            eye1 .className = "fa-solid fa-eye";
         }
     }
+}
+const signin = document.getElementById("sign-in_form")
+if(signin){
+    const signin_eye= document.getElementById("sign-in_fa-eye")
+const singin_pass = document.getElementById("sign_in-password")
+signin_eye.onclick = ()=>{
+    if(singin_pass.type=="password"){
+        singin_pass.type = "text";
+        signin_eye.className = "fa-solid fa-eye-slash"
+    }else{
+        singin_pass.type = "password";
+        signin_eye.className = "fa-solid fa-eye";
+    }
+}
+}
+
+
+
+    
+   console.log(screen.width)
