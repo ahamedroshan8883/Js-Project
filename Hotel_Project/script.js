@@ -63,7 +63,7 @@ document.getElementById("dcsrbcon").textContent = dscrbdetaills[0].describe;
 // slidenextpertime();
 setInterval(()=>{slidenext()},10000);
 // console.log(frame.src)
-signinpage()
+// signinpage()
 });
 const signup = document.getElementById("form")
 if(signup){
