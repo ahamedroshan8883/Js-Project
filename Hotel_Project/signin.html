@@ -20,19 +20,19 @@
             <div class="ms-4 mb-3 position-relative" id="form_container-input">
                 <label for="Name" class="form-label">Gmail Id</label><br>
                 <input type="text" class="form-control" placeholder="Enter your Gmail Id" id="sign_in-gmail" onblur="signin_gmail_validate()">
-                <i class="fa-solid fa-envelope position-absolute top-50 start-0 ms-3"></i>
+                <i class="fa-solid fa-envelope position-absolute top-50 start-0 ms-2"></i>
                 <i class="fa-solid fa-circle-exclamation position-absolute top-50 end-0 me-5"></i>
                 <small>error</small>
             </div>
             <div class= "ms-4 mb-3 position-relative" id="form_container-input">
                 <label for="Name" class="form-label">Password</label><br>
                 <input type="password" class="form-control" placeholder="Password" id="sign_in-password" onblur="signin_passwd_validate()" onfocus="signin_gmail_validate()">
-                <i class="fa-solid fa-keyboard position-absolute top-50 start-0 ms-3"></i>
+                <i class="fa-solid fa-keyboard position-absolute top-50 start-0 ms-2"></i>
                 <i class="fa-solid fa-eye position-absolute top-50 end-0 me-3" id="sign-in_fa-eye"></i>
                 <i class="fa-solid fa-circle-exclamation position-absolute top-50 end-0 me-5"></i>
                 <small>error</small>
             </div>
-            <div class="signin_form-btn">
+            <div class="container signin_form-btn">
                 <button type="submit">Submit</button>
                 <button onclick="signupage()">back</button>
             </div>

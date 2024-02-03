@@ -72,20 +72,20 @@ if(signup){
     eye.onclick = ()=>{
         if(passwd.type=="password"){
             passwd.type="text";
-            eye.className =  "fa-solid fa-eye-slash"
+            eye.className =  "fa-solid fa-eye-slash position-absolute top-50 end-0 translate-middle-y mt-2 me-2"
         }else{
             passwd.type="password";
-            eye.className =  "fa-solid fa-eye"
+            eye.className =  "fa-solid fa-eye position-absolute top-50 end-0 translate-middle-y mt-2 me-2"
         }
     }
     const eye1= document.getElementById("fa-eye1")
     eye1.onclick = ()=>{
         if(conpasswd.type=="password"){
             conpasswd.type = "text";
-            eye1.className = "fa-solid fa-eye-slash"
+            eye1.className = "fa-solid fa-eye-slash position-absolute top-50 end-0 translate-middle-y mt-2 me-2"
         }else{
             conpasswd.type = "password";
-            eye1 .className = "fa-solid fa-eye";
+            eye1 .className = "fa-solid fa-eye position-absolute top-50 end-0 translate-middle-y mt-2 me-2";
         }
     }
 }
@@ -96,10 +96,10 @@ const singin_pass = document.getElementById("sign_in-password")
 signin_eye.onclick = ()=>{
     if(singin_pass.type=="password"){
         singin_pass.type = "text";
-        signin_eye.className = "fa-solid fa-eye-slash"
+        signin_eye.className = "fa-solid fa-eye-slash position-absolute top-50 end-0 translate-middle-y mt-2 me-2"
     }else{
         singin_pass.type = "password";
-        signin_eye.className = "fa-solid fa-eye";
+        signin_eye.className = "fa-solid fa-eye position-absolute top-50 end-0 translate-middle-y mt-2 me-2";
     }
 }
 }

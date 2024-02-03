@@ -57,7 +57,7 @@ iframe{
    background: none;
 }
 #form_container-input-error input[type=text],#form_container-input-error input[type=password]{
-   padding-left: 40px;
+   padding-left: 30px;
    border: 3px solid #ff0000;
    height: 50px;
    background: none;
@@ -126,8 +126,6 @@ i.fa-envelope,i.fa-keyboard{
     /* font-weight: bolder; */
     color:  #bc9b6a;
     cursor: pointer;
-    position: relative;
-    left: 380px;
 }
 .form-btn button:hover{
     background-color: #bc9b6a;
@@ -221,13 +219,13 @@ ul{
 .dscrp-btn .icon{
     height: 50px;
     width: 50px;
-    background-color: #111111;
     border-radius: 30px;
+    background: none;
     border: 2px solid white;
     color:#FAF7FF;
     opacity: 0.2;
 }
- .icon:hover{
+.dscrp-btn .icon:hover{
     opacity: 0.8;
 }
 .fa-solid.fa-eye{
@@ -238,9 +236,6 @@ ul{
     cursor: pointer;
 }
 .fa-solid.fa-eye-slash{
-    position: relative;
-    bottom: 0px;
-    right: 80px;
     color: #c6c6c9;
     cursor: pointer;
 }
@@ -251,7 +246,6 @@ ul{
 }
 .signin_form-btn button{
     font-family: 'Lobster', sans-serif;  
-    display: inline-block;
     padding: 15px;
     width: 100px;
     background: none;
@@ -261,8 +255,6 @@ ul{
     /* font-weight: bolder; */
     color:  #bc9b6a;
     cursor: pointer;
-    position: relative;
-    left: 380px;
 }
 .signin_form-btn button:hover{
     background-color: #bc9b6a;
