@@ -79,8 +79,11 @@
             }
             else if(data.weather[0].main=='Clear'){
                 icon.innerHTML =  "clear_day";
-            }else if(data.weather[0].main=='rainy'){
+            }else if(data.weather[0].main=='Rainy'){
                 icon.innerHTML =  "rainy";
+            }
+            else if(data.weather[0].main=='Haze'){
+                icon.innerHTML =  "mist";
             }
         document.querySelector(".weather-container").style.display = 'block';
         }

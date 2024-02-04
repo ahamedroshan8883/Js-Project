@@ -11,11 +11,11 @@ iframe{
     width: 500px;
     height: 100%;
 }
-/* .container-fluid{
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+/* .container-fluid{ */
+    /* width: 100%; */
+    /* max-width: 250px; */
+    /* height: 100%;
+    max-height: 750px;
 } */
 .describe_container{
     background-color:#bc9b6a;
@@ -195,19 +195,22 @@ ul{
 }
 .title_form-container{
     cursor: pointer;
-    /* text-align: center; */
+    text-align: center; 
     /* margin-top: 30px; */
     color: #bc9b6a;
     font-family: 'Lobster', sans-serif;
     font-size: larger;
     font-weight: 100;
 }
+
 .dscrb_content-title h2{
-    margin: 20px  200px 0px 200px;
-    text-align: center;
+    background-color: rgba(26, 26, 26, 0.5);
+    width: 100%;
+    margin-top: 20px;
+    font-size: 30px;
     color: #FAF7FF;
     font-family:'Raleway', sans-serif;
-    font-weight: 1600;
+    font-weight: 500;
 }
 .dscrb_content{
     /* width: 700px; */
@@ -223,10 +226,15 @@ ul{
     background: none;
     border: 2px solid white;
     color:#FAF7FF;
-    opacity: 0.2;
+    opacity: 0.5;
 }
 .dscrp-btn .icon:hover{
-    opacity: 0.8;
+    opacity: 1;
+}
+.dscrp-btn{
+    display: flex;
+    margin: 40px auto 0;
+    justify-content: space-between;
 }
 .fa-solid.fa-eye{
     position: relative;

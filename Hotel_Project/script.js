@@ -61,7 +61,7 @@ document.getElementById("title").textContent = dscrbdetaills[0].title;
 document.getElementById("imgcon").style.backgroundImage = "url("+dscrbdetaills[0].img+")";
 document.getElementById("dcsrbcon").textContent = dscrbdetaills[0].describe;
 // slidenextpertime();
-setInterval(()=>{slidenext()},10000);
+// setInterval(()=>{slidenext()},10000);
 // console.log(frame.src)
 signupage()
 });
