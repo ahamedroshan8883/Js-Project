@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/6b0c8e229f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="app-style.css">
 </head>
 <body>
@@ -13,20 +14,29 @@
             <input type="text" placeholder="enter city name" spellcheck="false">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <div class="weather-container">
-            <i class="fa-solid fa-cloud-sun-rain weather-icon"></i>
-            <h1 class="temp">22 c</h1>
+        <p class="error">Invalid city name</p>
+        <div class="weather-container" style="display: none;">
+            <span class="material-symbols-outlined weather-icon">
+                partly_cloudy_day
+                </span>
+            <p class="description">Mist</p>
+            <h1 class="temp">22°C</h1>
             <h2 class="city">New York</h2>
             <div class="details">
                 <div class="col">
-                    <i class="fa-solid fa-water weather-icon"></i>
-                    <div>
+                    <span class="material-symbols-outlined col-weather-icon">
+                        waves
+                        </span>
+           
+                        <div>
                         <p class="humidity">50%</p>
                         <p>Humidity</p>
                     </div>
                 </div>
                 <div class="col">
-                    <i class="fa-solid fa-wind weather-icon"></i>
+                    <span class="material-symbols-outlined col-weather-icon">
+                        air
+                        </span>
                     <div>
                         <p class="wind">15 km/h</p>
                         <p>wind speed</p>
@@ -42,18 +52,55 @@
 
     const city = document.querySelector("input");
     const searchbtn = document.querySelector("button");
+
     async function checkweather(city){
+
         const respone = await fetch(apiurl+city+`&appid=${apikey}`)
-        var data = await respone.json();
-        console.log(data);
+       
+
+        if(respone.status == 404){
+            document.querySelector(".weather-container").style.display = 'none';
+            document.querySelector(".error").style.display = 'block';
+        }else{
+            var data = await respone.json();
+            console.log(data);
+
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML =Math.round(data.main.temp)+"°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity+"%";
         document.querySelector(".wind").innerHTML = data.wind.speed;
+        document.querySelector(".description").innerHTML = data.weather[0].main;
 
+            const icon = document.querySelector(".weather-icon");
+            if(data.weather[0].main=='Clouds'){
+                icon.innerHTML = "cloud";
+            }else if(data.weather[0].main=='Mist'){
+                icon.innerHTML =  "foggy";
+            }
+            else if(data.weather[0].main=='Clear'){
+                icon.innerHTML =  "clear_day";
+            }else if(data.weather[0].main=='rainy'){
+                icon.innerHTML =  "rainy";
+            }
+        document.querySelector(".weather-container").style.display = 'block';
+        }
+
+    
     }
     searchbtn.addEventListener("click",()=>{
     checkweather(city.value);
     });
+
+    window.onload = async function(){
+        const respone = await fetch(apiurl+"chennai"+`&appid=${apikey}`)
+        var data = await respone.json();
+        document.querySelector(".city").innerHTML = data.name;
+        document.querySelector(".temp").innerHTML =Math.round(data.main.temp)+"°C";
+        document.querySelector(".humidity").innerHTML = data.main.humidity+"%";
+        document.querySelector(".wind").innerHTML = data.wind.speed;
+        document.querySelector(".description").innerHTML = data.weather[0].main;
+        console.log(data);
+        document.querySelector(".weather-container").style.display = 'block';
+    }
 </script>
 </html>
